@@ -2,13 +2,23 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def index(request):
-    return render(request, 'main/html/index.html')
+    return render(request, 'main/html/index.html', {'title':'Главная страница'})
 
 def bio(request):
-    return render(request, 'main/html/bio.html')
+    data = {
+        'title':'Биография'
+    }
+    return render(request, 'main/html/bio.html', data )
 
 def hobbies(request):
-    return render(request,'main/html/hobbies.html')
+    data = {
+        'title': 'Хобби'
+    }
+
+    return render(request,'main/html/hobbies.html',data)
 
 def skills(request):
-    return render(request,'main/html/skills.html')
+    data = {
+        'title': 'Навыки'
+    }
+    return render(request,'main/html/skills.html',data)
