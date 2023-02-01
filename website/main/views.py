@@ -4,8 +4,11 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'main/html/index.html')
 
-def about(request):
-    return render(request, 'main/html/about.html')
+def bio(request):
+    return render(request, 'main/html/bio.html')
 
-def contact(request):
-    return HttpResponse('<h1>Contact information</h1>')
+def hobbies(request):
+    return render(request,'main/html/hobbies.html')
+
+def skills(request):
+    return render(request,'main/html/skills.html')
