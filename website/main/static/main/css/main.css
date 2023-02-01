@@ -64,3 +64,6 @@ main .features{
     vertical-align: middle;
 }
 
+ a {
+    text-decoration: none; /* Убираем подчёркивание */
+   }

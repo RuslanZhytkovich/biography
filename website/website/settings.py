@@ -1,4 +1,4 @@
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -19,6 +19,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'main',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -107,9 +108,15 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/media/'
+
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+   BASE_DIR / "static",
 
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
