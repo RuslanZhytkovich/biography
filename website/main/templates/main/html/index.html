@@ -3,8 +3,27 @@
 {% block content %}
 
 <div class="features">
-    <h1>Главная страница</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab amet aspernatur assumenda consectetur consequatur consequuntur delectus doloremque facilis hic inventore nisi quod recusandae sapiente soluta tenetur totam veritatis, voluptas voluptatum.</p>
+
+
+    {% if news %}
+    {% for el in news %}
+        <div class = "alert alert-warning">
+            <h2>{{ el.title }}</h2>
+            <p>{{ el.content | linebreaks |  truncatewords:5  }}</p>
+
+            {% if el.photo %}
+	        <p><img class="img-article-left thumb" src="{{el.photo.url}}"></p>
+            {% endif %}
+
+            <p class="date">{{ el.date }}</p>
+            <p class ="link-read-post"> Читать </p>
+            {% else %}
+            <p>Новости на сайте отсутствуют! </p>
+            {% endif %}
+
+
+        </div>
+    {% endfor %}
 
 
 </div>

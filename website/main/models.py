@@ -8,4 +8,12 @@ class News(models.Model):
 
 
     def __str__(self):
-        return self.title
+        return f'Новость: {self.title}'
+
+
+
+
+    class Meta:
+        verbose_name = 'Новость'
+        verbose_name_plural = 'Новости'
+        ordering = ['-date', ]
