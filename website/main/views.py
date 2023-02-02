@@ -1,8 +1,10 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from.models import News
 
 def index(request):
-    return render(request, 'main/html/index.html', {'title':'Главная страница'})
+    news = News.objects.all()
+    return render(request, 'main/html/index.html', {'news': news})
 
 def bio(request):
     data = {
