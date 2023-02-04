@@ -5,21 +5,20 @@
 <div class="features">
 
 
-    {% if news %}
+
     {% for el in news %}
         <div class = "alert alert-warning">
             <h2>{{ el.title }}</h2>
             <p>{{ el.content | linebreaks |  truncatewords:5  }}</p>
 
-            {% if el.photo %}
+
 	        <p><img class="img-article-left thumb" src="{{el.photo.url}}"></p>
-            {% endif %}
+
 
             <p class="date">{{ el.date }}</p>
             <p class ="link-read-post"> Читать </p>
-            {% else %}
-            <p>Новости на сайте отсутствуют! </p>
-            {% endif %}
+
+
 
 
         </div>
