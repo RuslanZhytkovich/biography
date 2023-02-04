@@ -10,6 +10,8 @@ urlpatterns = [
     path('', include('main.urls')),             # include url files from main
 
 
+
+
 ]
 
 if settings.DEBUG:

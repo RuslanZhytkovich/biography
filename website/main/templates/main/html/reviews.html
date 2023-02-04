@@ -1,0 +1,11 @@
+{% extends 'main/html/base.html' %}
+
+{% block content %}
+<div class="features"><h1>Отзывы</h1></div>
+{% endblock %}
+
+{% block title %} Отзывы {% endblock %}
+
+{% block aside%}
+<a href="{% url 'create' %}"><li><button class = "btn btn-info"><i class = "fas fa-plus-circle"></i> Добавить отзыв</button></li></a>
+{% endblock %}

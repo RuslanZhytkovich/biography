@@ -1,0 +1,22 @@
+{% extends 'main/html/base.html' %}
+
+{% block title %} Форма по добавлению статьи {% endblock %}
+
+{% block content %}
+
+<div class="features">
+  <h1>Форма по добавлению отзыва</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.author }}<br>
+    {{ form.review }}<br>
+
+    <span>{{ error }}</span>
+    <button class = "btn btn-success" type = "submit">Добавить отзыв</button>
+
+  </form>
+</div>
+{% endblock %}
+
+
+

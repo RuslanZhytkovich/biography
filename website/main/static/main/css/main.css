@@ -1,5 +1,6 @@
 
 body {
+
     background: #2c2c2c;
 }
 
@@ -15,7 +16,17 @@ aside {
 
 }
 
+h1{
+      color: gold;
 
+    vertical-align: middle;
+    margin-left: 150px;
+    margin-top: 23px;
+    margin-bottom: 60px;
+    position: relative;
+
+
+}
 
 
 aside .logo
@@ -77,6 +88,10 @@ main .features{
     border: 5px solid lightslategray;
     height: 450px;
 
+
+    margin-right: auto;
+
+
 }
 
 .alert-warning h2{
@@ -114,4 +129,13 @@ img.img-article-left.thumb {
 
 .link-read-post:hover{
    transform: scale(1.2); /* Увеличиваем масштаб */
+}
+
+form {
+    margin-left: 41%;
+    padding: 40px 50px 20px;
+    width: 500px;
+    margin-top: 50px;
+    border: 4px solid;
+    background-color: darkslateblue;
 }
