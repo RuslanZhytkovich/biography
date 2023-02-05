@@ -16,7 +16,8 @@
 
 
             <p class="date">{{ el.date }}</p>
-            <p class ="link-read-post"> Читать </p>
+
+            <a href = "{% url 'news_detail' el.id %}" class ="link-read-post"> Читать </a>
 
 
 

@@ -2,6 +2,23 @@ from django.http import HttpResponse
 from django.shortcuts import render,redirect
 from .models import News
 from .forms import ReviewForm
+from django.views.generic import DetailView
+
+
+
+
+class NewsDetailView(DetailView):
+
+    model = News
+    template_name = 'main/html/details_view.html'
+    context_object_name = 'news'
+
+
+
+
+
+
+
 
 def index(request):
     news = News.objects.all()

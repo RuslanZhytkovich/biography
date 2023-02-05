@@ -1,0 +1,36 @@
+{% extends 'main/html/base.html' %}
+
+{% block title %}{{ news.title }}{% endblock %}
+
+
+
+{% block content %}
+
+<div class="features">
+
+    <h1 style="width: 300px;  height: 170px;
+    outline: 2px solid #000;
+    border: 5px solid gold;
+    border-radius: 12px;   margin-left: 850px; background: royalblue">{{ news.title }}</h1>
+
+
+      <p style="   border: 9px solid gold; color: black; font-size: 30px; font-family: 'DejaVu Sans'; background:  white; width: 700px; height: 900px;    vertical-align: middle;
+    margin-left: 650px;
+    margin-top: 23px;
+    margin-bottom: 60px;
+    position: relative;"> {{ news.content }} </p>
+
+      <p style="   width: 300px;  height: 50px;
+    outline: 2px solid #000;
+    border: 5px solid gold;
+    border-radius: 12px;   margin-left: 850px;"> {{ news.date }} </p>
+
+</div>
+
+
+
+
+
+
+{% endblock %}
+

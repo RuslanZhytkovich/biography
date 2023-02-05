@@ -9,4 +9,6 @@ urlpatterns = [
     path('skills/', views.skills, name='skills'),
     path('reviews/', views.reviews, name = 'reviews'),
     path('reviews/create', views.create, name='create'),
+    path('<int:pk>', views.NewsDetailView.as_view(), name='news_detail')
+
 ]
