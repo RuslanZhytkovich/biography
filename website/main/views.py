@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render,redirect
-from .models import News
+from .models import *
 from .forms import ReviewForm
 from django.views.generic import DetailView
 
@@ -38,10 +38,8 @@ def hobbies(request):
     return render(request,'main/html/hobbies.html',data)
 
 def reviews(request):
-    data = {
-        'title' : 'Отзывы'
-    }
-    return render(request, 'main/html/reviews.html',data)
+    reviews = Review.objects.all()
+    return render(request, 'main/html/reviews.html', {'reviews': reviews})
 
 def skills(request):
     data = {

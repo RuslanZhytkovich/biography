@@ -77,6 +77,11 @@ main .features{
     text-align: center;
     vertical-align: middle;
 }
+.features p{
+    color: darkslateblue;
+
+
+}
 
  a {
     text-decoration: none; /* Убираем подчёркивание */
@@ -144,3 +149,4 @@ form {
     border: 4px solid;
     background-color: darkslateblue;
 }
+
